@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4.969" height="7.91" viewBox="0 0 4.969 7.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="496" y="5677.06" width="4.969" height="7.91" filterUnits="userSpaceOnUse">
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feFlood result="flood-2"/>
+      <feComposite result="composite-2" operator="in" in2="SourceAlpha"/>
+      <feOffset result="offset" dx="-22.404" dy="-44.7"/>
+      <feOffset result="offset-2" dx="22.404" dy="44.7" in="composite-2"/>
+      <feComposite result="composite-3" operator="xor" in="offset"/>
+      <feComposite result="composite-6" operator="xor" in2="composite-2"/>
+      <feComposite result="composite-4" operator="in" in2="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="8.944"/>
+      <feComponentTransfer result="comp">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feComposite result="composite-5" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend-2" mode="multiply" in2="blend"/>
+    </filter>
+  </defs>
+  <path id="arrow" class="cls-1" d="M496.951,5684.82l3.834-3.47a0.462,0.462,0,0,0,0-.7l-0.02-.01-3.814-3.46a0.6,0.6,0,0,0-.777,0h0a0.484,0.484,0,0,0-.167.36v6.92a0.459,0.459,0,0,0,.173.35l0,0.01A0.6,0.6,0,0,0,496.951,5684.82Z" transform="translate(-496 -5677.06)"/>
+</svg>
