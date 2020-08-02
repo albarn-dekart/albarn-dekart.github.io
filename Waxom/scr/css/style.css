@@ -1225,7 +1225,7 @@ footer .w {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 10;
+  z-index: 1;
 }
 
 #intro .slick-arrow.slick-prev {
