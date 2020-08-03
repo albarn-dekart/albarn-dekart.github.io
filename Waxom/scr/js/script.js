@@ -53,6 +53,16 @@ $(document).ready(function () {
       dots: true,
       easing: "ease",
       appendDots: $("#intro .container"),
+      draggable: false,
+      responsive: [
+         {
+            breakpoint: 768,
+            settings: {
+               arrows: false,
+               draggable: true,
+            }
+         }
+      ]
    });
 
    $(".slider").slick({
