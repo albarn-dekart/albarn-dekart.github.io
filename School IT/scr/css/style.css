@@ -1,0 +1,287 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #f2f2f2;
+  color: #545454;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.section {
+  max-width: 1280px;
+  margin: 15px auto 0 auto;
+  padding: 15px;
+  background-color: #fff;
+}
+
+p {
+  margin: 15px 0 0 0;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.marks {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 15px;
+}
+
+table,
+th,
+td {
+  border: solid 1px #545454;
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: #d6d6d6 1px solid;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+header .link {
+  display: block;
+  margin-right: 15px;
+  color: #545454;
+  -webkit-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  transition: color 0.1s;
+  font-size: 15px;
+}
+
+header .link:hover {
+  color: #818181;
+}
+
+header .link-main {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.forms {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.forms_item {
+  background-color: white;
+  height: 196px;
+  border: #d6d6d6 1px solid;
+}
+
+.forms_item:hover {
+  background-color: #e2e7f1;
+  border: none;
+  -webkit-transition: background-color 0.1s;
+  -o-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+
+.forms_link {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  font-weight: 700;
+  font-size: 60px;
+  color: #545454;
+}
+
+.forms_link span {
+  display: block;
+  font-size: 18px;
+}
+
+.book embed {
+  margin-top: 15px;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.wrapper .main {
+  overflow: auto;
+  padding-bottom: 50px;
+  margin-bottom: 15px;
+}
+
+footer {
+  position: relative;
+  height: 50px;
+  margin-top: -50px;
+  clear: both;
+  padding: 15px;
+  font-size: 13px;
+  color: white;
+  background-color: #303030;
+  text-align: center;
+}
+
+@media (max-width: 731px) {
+  .forms {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .forms_item {
+    height: 138px;
+  }
+}
+
+@media (max-width: 589px) {
+  .forms {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .forms_item {
+    height: 166px;
+  }
+}
+
+@media (max-width: 445px) {
+  .forms {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .forms_item {
+    height: 140px;
+  }
+}
