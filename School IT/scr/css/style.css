@@ -126,6 +126,12 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
 .marks {
   overflow: auto;
 }
@@ -240,6 +246,10 @@ header .link-main {
   margin-top: 15px;
   text-align: center;
   color: #ec981a;
+}
+
+.book h2 {
+  margin-top: 15px;
 }
 
 .wrapper {
