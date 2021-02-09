@@ -228,10 +228,17 @@ header .link-main {
   font-size: 18px;
 }
 
-.book embed {
+.book img {
+  max-width: 400px;
+  display: block;
+  margin: 15px auto 0 auto;
+}
+
+.book a {
+  display: block;
   margin-top: 15px;
-  width: 100%;
-  height: 100vh;
+  text-align: center;
+  color: #ec981a;
 }
 
 .wrapper {
