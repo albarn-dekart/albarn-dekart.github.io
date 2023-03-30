@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="light">
+<header>
+    <div class="container">
+        <div id="header_content">
+            <div id="logo">track storm</div>
+
+            <button id="login_open">
+                <i class="icon fa-solid fa-user"></i>
+            </button>
+
+            <input type="date" id="date" value="2023-01-25">
+        </div>
+
+        <div id="main_info">
+            <div id="calories_input">
+                <p class="title">Calories</p>
+
+                <div class="flex">
+                    <div>
+                        <i class="fa-solid fa-bullseye"></i>
+                        <input class="field" type="text" autocomplete="off" inputmode="numeric" id="calorie_goal"
+                               placeholder="0">
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-fire"></i>
+                        <input class="field" type="text" autocomplete="off" inputmode="numeric" id="calorie_burnt"
+                               placeholder="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div id="calorie_bar">
+                    <div id="calorie_eaten_bar"></div>
+                </div>
+            </div>
+
+            <div id="details">
+                <div class="flex">
+                    <div class="mr-1">
+                        <div>Eaten</div>
+                        <div>Left</div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span id="calorie_eaten">0</span>
+                            <span> kcal</span>
+                        </div>
+
+                        <div>
+                            <span id="calorie_left">0</span>
+                            <span> kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="mr-1">
+                        <div>Protein</div>
+                        <div>Carbs</div>
+                        <div>Fat</div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span id="macros_p">0</span>
+                            <span> gr</span>
+                        </div>
+                        <div>
+                            <span id="macros_c">0</span>
+                            <span> gr</span>
+                        </div>
+                        <div>
+                            <span id="macros_f">0</span>
+                            <span> gr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div id="food_section" class="active">
+        <div class="container">
+            <div class="meal">
+                <div class="meal_title">
+                    <p class="title">Breakfast</p>
+
+                    <div data-target="breakfast" class="meal_calories"></div>
+
+                    <button type="button" class="meal_add">
+                        <i data-target="breakfast" class="button icon fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <div id="breakfast"></div>
+            </div>
+
+            <div class="meal">
+                <div class="meal_title">
+                    <p class="title">Lunch</p>
+
+                    <div data-target="lunch" class="meal_calories"></div>
+
+                    <button type="button" class="meal_add">
+                        <i data-target="lunch" class="button icon fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <div id="lunch"></div>
+            </div>
+
+            <div class="meal">
+                <div class="meal_title">
+                    <p class="title">Dinner</p>
+
+                    <div data-target="dinner" class="meal_calories"></div>
+
+                    <button type="button" class="meal_add">
+                        <i data-target="dinner" class="button icon fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <div id="dinner"></div>
+            </div>
+
+            <div class="meal">
+                <div class="meal_title">
+                    <p class="title">Snack</p>
+
+                    <div data-target="snack" class="meal_calories"></div>
+
+                    <button type="button" class="meal_add">
+                        <i data-target="snack" class="button icon fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <div id="snack"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="add_section">
+        <div class="container">
+            <div>
+                <div id="add_section_search">
+                    <div class="flex">
+                        <div class="mr-1">
+                            <div>Search</div>
+                            <input id="add_search" class="field field_long" type="search" placeholder="Product name"
+                            >
+                        </div>
+                        <div>
+                            <div>Weight</div>
+                            <input id="add_weight" class="field" value="100" type="text" autocomplete="off"
+                                   inputmode="numeric">
+                        </div>
+                    </div>
+
+                    <button id="add_close" type="button">
+                        <i class="icon fa-solid fa-xmark"></i>
+                    </button>
+
+                </div>
+
+                <div id="search_result">
+                </div>
+            </div>
+
+            <div id="add_new_product">
+                <p class="title">Add new product</p>
+
+                <div id="add_new_values">
+                    <div class="name">
+                        <div>Name</div>
+                        <input id="add_new_name" class="field field_long" type="text" autocomplete="off">
+                    </div>
+
+                    <div class="flex first">
+                        <div class="add_values_item">
+                            <div>Calories</div>
+                            <input id="add_new_calories" class="field" placeholder="0" type="text" autocomplete="off"
+                                   inputmode="numeric">
+                        </div>
+
+                        <div>
+                            <div>Protein</div>
+                            <input id="add_new_protein" class="field" placeholder="0" type="text" autocomplete="off"
+                                   inputmode="numeric">
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="add_values_item">
+                            <div>Carbs</div>
+                            <input id="add_new_carbs" class="field" placeholder="0" type="text" autocomplete="off"
+                                   inputmode="numeric">
+                        </div>
+
+                        <div>
+                            <div>Fat</div>
+                            <input id="add_new_fat" class="field" placeholder="0" type="text" autocomplete="off"
+                                   inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+
+                <button id="add_new_ok" class="button"><i class="icon fa-solid fa-check"></i></button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="login">
+    <p class="title">Log in</p>
+
+    <button id="login_close" type="button">
+        <i class="icon fa-solid fa-xmark"></i>
+    </button>
+
+    <div>
+        <label for="login_name">Email</label>
+        <input type="text" id="login_name" class="field" placeholder="you@example.com">
+    </div>
+
+    <div>
+        <label for="login_password">Password</label>
+        <input type="password" id="login_password" class="field" placeholder="Enter password">
+    </div>
+
+    <button type="submit" id="login_button">
+        Log in
+    </button>
+</div>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>
